@@ -220,7 +220,8 @@ open class Client : AlibabacloudOpenApi.Client {
             query["ValidityPeriod"] = request.validityPeriod!;
         }
         var req: AlibabacloudOpenApi.OpenApiRequest = AlibabacloudOpenApi.OpenApiRequest([
-            "query": AlibabaCloudOpenApiUtil.Client.query(query)
+            "query": AlibabaCloudOpenApiUtil.Client.query(query),
+            "body": [String: String]()
         ])
         var params: AlibabacloudOpenApi.Params = AlibabacloudOpenApi.Params([
             "action": "SendMessageWithTemplate",
